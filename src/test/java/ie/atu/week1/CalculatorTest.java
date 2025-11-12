@@ -16,15 +16,15 @@ public class CalculatorTest { //click the run button here
     }
 
     @Test
-    public void testMul_Success() {
+    public void testDiv_Success() {
 
-        assertEquals(32, calc.mul(8, 4)); //alt+enter to import library
+        assertEquals(2, calc.div(8, 4)); //alt+enter to import library
 
     }
 @Test
-    public void testMul_Failure() {
-        Exception ex = assertThrows(ArithmeticException.class, ()-> calc.mul(Integer.MAX_VALUE,1));
-        assertEquals("Number cannot be greater than or equal to Integer.MAX_VALUE", ex.getMessage());
+    public void testDiv_Failure() {
+        Exception ex = assertThrows(ArithmeticException.class, ()-> calc.div(Integer.MAX_VALUE, 0));
+        assertEquals("Number cannot be divided by 0", ex.getMessage());
     }
 
 }
