@@ -1,22 +1,12 @@
 package ie.atu.week1;
 
 public class Calculato {
+
     public int add(int firstNum, int secondNum) {
-
-        return firstNum + secondNum;
-
+        if (firstNum >= Integer.MAX_VALUE && secondNum >= Integer.MAX_VALUE)
+            throw new ArithmeticException("Number cannot be greater than or equal to Integer.MAX_VALUE");
+        int result = firstNum + secondNum;
+        return result;
     }
 
-    public int sub(int firstNum, int secondNum) {
-        return firstNum - secondNum;
-
-    }
-
-    public int mul(int firstNum, int secondNum) {
-        return firstNum * secondNum;
-    }
-
-    public int div(int firstNum, int secondNum) {
-        return firstNum / secondNum;
-    }
 }
