@@ -16,15 +16,15 @@ public class CalculatorTest { //click the run button here
     }
 
     @Test
-    public void testAdd_Success() {
+    public void testSub_Success() {
 
-        assertEquals(20, calc.add(16, 4)); //alt+enter to import library
+        assertEquals(12, calc.sub(16, 4)); //alt+enter to import library
 
     }
 @Test
-    public void testAdd_Failure() {
-        Exception ex = assertThrows(ArithmeticException.class, ()-> calc.add(Integer.MAX_VALUE,1));
-        assertEquals("Number cannot be greater than or equal to Integer.MAX_VALUE", ex.getMessage());
+    public void testSub_Failure() {
+        Exception ex = assertThrows(ArithmeticException.class, ()-> calc.sub(Integer.MIN_VALUE,1));
+        assertEquals("Number cannot be greater than or equal to Integer.MIN_VALUE", ex.getMessage());
 }
 
 }
